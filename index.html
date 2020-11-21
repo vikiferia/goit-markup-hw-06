@@ -431,26 +431,51 @@
 
     <!--Модальное окно-->
     <div class="backdrop is-hidden hover-time" data-modal>
+
         <div class="modal">
             <button class="button-modal-close" data-modal-close>
                 <svg class="modal-close-svg">
                     <use href="./images/sprite.svg#closeblack"></use>
                 </svg>
             </button>
-            <form>
-                <div>
-                    <label for=""></label>
-                    <input type="name">
+
+            <form class="modal-form" autocomplete="off">
+                <h3 class="form-title">Оставьте свои данные, мы вам перезвоним</h3>
+                <div class="form-file">
+                    <label for="name" class="form-content">Имя</label>
+
+                    <div class="form-icon">
+                        <input class="form-box" type="name" id="name" pattern="^[А-Яа-яЁё\s]+$" required autofocus>
+
+                        <svg class="modal-svg">
+                            <use href="./images/sprite.svg#user"></use>
+                        </svg>
+                    </div>
                 </div>
-                <div>
-                    <label for=""></label>
-                    <input type="tel">
+                <div class="form-file">
+                    <label for="tel" class="form-content">Телефон</label>
+                    <div class="form-icon">
+                        <input class="form-box" type="tel" id="tel" required>
+                        <svg class="modal-svg">
+                            <use href="./images/sprite.svg#telefon"></use>
+                        </svg>
+                    </div>
                 </div>
-                <div>
-                    <label for=""></label>
-                    <input type="email">
+                <div class="form-file">
+                    <label for="email" class="form-content">Почта</label>
+                    <div class="form-icon">
+                        <input class="form-box" type="email" id="email" required>
+                        <svg class="modal-svg">
+                            <use href="./images/sprite.svg#mailmod"></use>
+                        </svg>
+                    </div>
                 </div>
-                <button class="button" type="submit"></button>
+                <div class="form-file">
+                    <label for="user-message" class="form-content">Комментарий</label>
+                    <textarea class="message" name="user-message" id="user-message" rows="7"
+                        placeholder="Введите текст"> </textarea>
+                </div>
+                <button class="button button-modal" type="submit">Отправить</button>
 
             </form>
 
