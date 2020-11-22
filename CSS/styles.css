@@ -841,6 +841,7 @@ img {
 .modal-form {
     margin-left: auto;
     margin-right: auto;
+
     padding: 40px;
     font-size: 12px;
     line-height: 1.17;
@@ -913,6 +914,64 @@ img {
     fill: var(--accent-color);
 }
 
+.message {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.message:focus {
+    outline: none;
+    cursor: pointer;
+    border-color: var(--accent-color);
+    color: var(--main-text-color);
+}
+
+.checkbox-lable {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.chek-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--black);
+    border-radius: 2px;
+}
+
+.checkbox:checked + .chek-icon {
+    background-color: var(--accent-color);
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--accent-color);
+}
+
+.link-consent {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.button-modal {
+    display: flex;
+    margin-left: 165px;
+    margin-right: 163px;
+}
+
 /* Страница Портфолио */
 
 .section-portfolio {
@@ -922,22 +981,6 @@ img {
 .portfolio-container {
     padding-top: 94px;
     padding-bottom: 94px;
-}
-
-.message {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-
-.message:focus {
-    outline: none;
-    cursor: pointer;
-    border-color: var(--accent-color);
-    color: var(--main-text-color);
 }
 
 /* Фильтры */
