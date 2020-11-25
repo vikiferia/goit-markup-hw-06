@@ -691,7 +691,7 @@ img {
 .footer-content-text {
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.17;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--white);
@@ -830,18 +830,25 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.button-modal-close:hover {
+    cursor: pointer;
+}
+
 .modal-close-svg {
     display: flex;
     justify-content: center;
     width: 11px;
     height: 11px;
-    fill: var(--black);
+    /* fill: var(--black); */
+}
+
+.modal-close-svg:hover {
+    fill: var(--accent-color);
 }
 
 .modal-form {
     margin-left: auto;
     margin-right: auto;
-
     padding: 40px;
     font-size: 12px;
     line-height: 1.17;
@@ -879,6 +886,7 @@ img {
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    cursor: pointer;
 }
 .form-icon {
     position: relative;
@@ -946,10 +954,16 @@ img {
     appearance: none;
 }
 
+.checkbox {
+    position: absolute;
+    opacity: 0;
+    /* margin-left: 12px;
+    margin-top: 5px; */
+}
 .chek-icon {
-    display: inline-block;
-    width: 16px;
-    height: 15px;
+    margin-left: 12px;
+    width: 17px;
+    height: 16px;
     border: 1px solid var(--black);
     border-radius: 2px;
     margin-right: 7px;
@@ -958,9 +972,11 @@ img {
 .checkbox:checked + .chek-icon {
     border-color: var(--accent-color);
     background-color: var(--accent-color);
-    background-image: url(../images/check.svg);
+    background-image: url(../images/iconcheck.svg);
+    background-repeat: no-repeat;
+    pointer-events: none;
+
     background-size: contain;
-    background-origin: border-box;
 }
 
 .link-consent {
@@ -968,40 +984,32 @@ img {
     text-decoration: underline;
     padding-left: 4px;
 }
-
 .button-modal {
     display: flex;
     margin-left: 165px;
     margin-right: 163px;
-}
 
-/* Страница Портфолио */
+    padding-left: 4px;
+}
 
 .section-portfolio {
     background-color: var(--white);
 }
-
 .portfolio-container {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-
-/* Фильтры */
-
-.portfolio-container li {
+.section-port .portfolio-container li {
     width: 370px;
 }
-
 .button-portfolio {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
-
 .button-portfolio .button-filter:not(:last-child) {
     margin-right: 8px;
 }
-
 .button-filter {
     padding-top: 6px;
     padding-bottom: 6px;
@@ -1017,7 +1025,6 @@ img {
     border: 0;
     border-radius: 4px;
 }
-
 .button-filter:hover,
 .button-filter:focus {
     background-color: var(--accent-color);
@@ -1025,37 +1032,30 @@ img {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
 .button-filter:visited {
     background-color: var(--light-bg);
     color: var(--black);
 }
-
 .card-set {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
     margin-top: -30px;
 }
-
 .gallery-portfolio {
     margin-top: 30px;
 }
-
 .gallery-portfolio {
     flex-basis: calc(100% / 3 - 30px);
 }
-
 .gallery-portfolio:not(:nth-child(3n)) {
     margin-right: 30px;
 }
-
 .gallery-portfolio:hover,
 .gallery-portfolio:focus {
     box-shadow: 1px 1px 1px 1px rgba(110, 63, 63, 0.12),
         1px 1px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(150, 47, 47, 0.16);
 }
-
 .project {
     padding-top: 19px;
     padding-bottom: 19px;
@@ -1063,7 +1063,6 @@ img {
     padding-right: 23px;
     border: 1px solid var(--line);
 }
-
 .project-title {
     font-weight: 700;
     font-size: 18px;
@@ -1073,19 +1072,16 @@ img {
     margin-bottom: 4px;
     color: var(--black);
 }
-
 .project-subtitle {
     font-size: 16px;
     line-height: 1.87;
     margin-top: 0;
     margin-bottom: 0;
 }
-
 .menu-img {
     position: relative;
     overflow: hidden;
 }
-
 .menu-overlay {
     position: absolute;
 
@@ -1099,16 +1095,13 @@ img {
     padding-bottom: 63px;
     background-color: var(--accent-color);
     opacity: 0.9;
-
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .portfolio-link:hover .menu-overlay,
 .portfolio-link:focus .menu-overlay {
     transform: translateY(0);
 }
-
 .menu-text {
     margin: 0;
     font-size: 18px;
